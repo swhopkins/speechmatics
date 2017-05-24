@@ -7,7 +7,7 @@ module Speechmatics
     include Configuration
 
     def create(params={})
-      attach_audio(params)
+      attach_audio(params) unless params[:data_url]
       attach_text(params) if params[:text_file]
       set_mode(params)
       super
