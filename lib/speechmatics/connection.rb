@@ -22,7 +22,7 @@ module Speechmatics
         params: { auth_token: auth_token },
         headers: { 'User-Agent' => user_agent, 'Accept' => 'application/json' },
         ssl: { verify: false },
-        request: { timeout: 120 }
+        request: { timeout: 300 }
       }.merge(opts)
       options[:headers] = options[:headers].merge(headers)
       options[:params] = options[:params].merge(params)
